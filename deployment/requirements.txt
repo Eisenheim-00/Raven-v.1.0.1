@@ -1,0 +1,92 @@
+# requirements.txt - Python Dependencies
+# These are all the tools your bot needs to work (like ingredients for a recipe)
+
+# Core trading and data libraries
+alpaca-py>=0.40.0                # Modern Alpaca SDK (NEW 2024 version)
+pandas==2.0.3                    # Handle data (like Excel for Python)
+numpy==1.24.3                    # Math operations
+yfinance==0.2.18                 # Get Bitcoin prices from Yahoo Finance
+
+# Machine learning (for your 60.8% accuracy model)
+scikit-learn==1.3.0              # Machine learning tools
+joblib==1.3.1                    # Load your trained model
+
+# Scheduling and timing
+schedule==1.2.0                  # Make bot run every hour automatically
+python-dateutil==2.8.2          # Handle dates and times
+
+# Data storage
+sqlite3                          # Built into Python - stores your data locally
+
+# Web requests (for getting Bitcoin prices)
+requests==2.31.0                # Talk to websites and APIs
+urllib3==2.0.3                   # Web connections
+
+# Logging and monitoring
+logging                          # Built into Python - keeps diary of bot activities
+
+# Optional: For advanced features (uncomment if needed)
+# ta-lib==0.4.26                 # Technical analysis indicators
+# matplotlib==3.7.1              # Create charts and graphs
+# plotly==5.15.0                 # Interactive charts
+# dash==2.11.1                   # Web dashboard for monitoring
+
+# Development tools (optional)
+# jupyter==1.0.0                 # For testing and analysis
+# ipython==8.14.0                # Better Python shell
+
+# =============================================================================
+# INSTALLATION INSTRUCTIONS (Step by Step)
+# =============================================================================
+
+"""
+🚀 HOW TO INSTALL RAVEN'S UPDATED PACKAGES (2024):
+
+IMPORTANT: We're now using the MODERN Alpaca SDK (alpaca-py)!
+
+METHOD 1 - Simple Installation (Recommended):
+1. Open VS Code terminal (Terminal → New Terminal)
+2. Make sure virtual environment is active: raven_env\Scripts\activate
+3. Copy and paste this command:
+   python -m pip install alpaca-py pandas numpy yfinance scikit-learn joblib schedule requests
+
+METHOD 2 - Using requirements.txt:
+1. Save this file as "requirements.txt" in your Raven folder
+2. Activate virtual environment: raven_env\Scripts\activate
+3. Run: python -m pip install -r requirements.txt
+
+🎯 WHAT CHANGED FOR RAVEN:
+✅ Updated to alpaca-py (modern 2024 SDK)
+✅ Better API structure and reliability
+✅ More professional trading interface
+✅ Enhanced error handling
+
+💡 WHY THIS MATTERS:
+The old alpaca-trade-api is being deprecated. Raven now uses the latest
+alpaca-py SDK which is faster, more reliable, and officially supported.
+
+🔧 TROUBLESHOOTING:
+If you get errors about conflicting packages:
+1. python -m pip uninstall alpaca-trade-api  (remove old SDK)
+2. python -m pip install alpaca-py  (install new SDK)
+
+📁 FOLDER STRUCTURE AFTER INSTALLATION:
+raven_trading_bot/
+├── raven_env/              ← Virtual environment
+├── main.py                 ← Raven's main brain
+├── config.py              ← Settings and API keys
+├── data_manager.py        ← Bitcoin data collector
+├── signal_generator.py    ← 60.8% accuracy predictor
+├── alpaca_trader.py       ← Modern Alpaca interface
+├── logger.py              ← Raven's memory
+├── requirements.txt       ← This file
+├── models/                ← Your trained model folder
+│   └── optimized_bitcoin_model.pkl
+└── logs/                  ← Raven's activity logs
+
+🎯 NEXT STEPS AFTER INSTALLATION:
+1. Put your model file in the models/ folder
+2. Get Alpaca API keys and update config.py
+3. Run: python main.py
+4. Watch Raven hunt for profitable Bitcoin trades! 🐦‍⬛
+"""
